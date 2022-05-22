@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin damage calc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="head">
+        <div class="menu">
+            <div class="logo">
+                <a href="#" class="a-logo"><img src="static/images/home.png" alt="" id="home-button"></a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="character-container" id="container">
+
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/albedo.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/geo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Альбедо</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/aloy.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Элой</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/amber.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Эмбер</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/arataki_itto.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/geo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Итто</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/barbara.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/hydro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Барбара</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/beidou.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Бэй Доу</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/bennett.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Беннет</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/chongyun.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Чун Юнь</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/diluc.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Дилюк</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/diona.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Диона</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/eula.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Эола</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/fischl.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Фишль</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/ganyu.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Гань Юй</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/gorou.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/geo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Горо</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/hu_tao.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Ху Тао</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/jean.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/anemo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Джинн</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/kaedehara_kazuha.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/anemo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Кадзуха</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/kaeya.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Кэйа</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/kamisato_ayaka.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Аяка</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/kamisato_ayato.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/hydro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Аято</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/keqing.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Кэ Цин</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/klee.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Кли</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/kujou_sara.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Сара</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/lisa.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Лиза</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/mona.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/hydro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Мона</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/ningguang.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/geo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Нин Гуан</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/noelle.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/geo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Ноэлль</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/qiqi.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Ци Ци</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/raiden_shogun.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Райдэн</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/razor.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Рэйзор</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/rosaria.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Розария</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/sangonomiya_kokomi.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/hydro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Кокомия</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/sayu.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/anemo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Саю</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/shenhe.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/cryo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Шэнь Хэ</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/sucrose.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/anemo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Сахароза</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/tartaglia.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/hydro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Тарталья</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/thoma.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Тома</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/traveler_anemo.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/anemo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Анэмо ГГ</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/traveler_geo.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/geo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Гео ГГ</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/traveler_electro.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Электро</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/venti.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/anemo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Венти</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/xiangling.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Сян Лин</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/xiao.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/anemo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Сяо</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/xingqiu.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/hydro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Син Цю</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell" id="al">
+                <div class="cell-top z4"><img src="static/images/characters/xinyan.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Синь Янь</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/yae_miko.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/electro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Яэ Мико</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/yanfei.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Янь Фэй</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/yoimiya.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/pyro.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Ёимия</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z4"><img src="static/images/characters/yun_jin.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/geo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Юнь Цзинь</p>
+                </div>
+            </a>
+            <a href="#" class="character-cell">
+                <div class="cell-top z5"><img src="static/images/characters/zhongli.png" alt="" class="w-full"></div>
+                <div class="cell-element"><img src="static/images/elements/geo.png" alt="" class="element"></div>
+                <div class="cell-bottom">
+                    <p class="hero-name">Чжун Ли</p>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+    <div class="main-calc" id="calc">
+        <div class="hero-info">
+            <div class="char-name" id="char-name">Альбедо</div>
+            <div class="hero-pic"><img id="hero-img" src="static/images/characters/full/albedo.png" alt="" class="hero-picture"></div>
+        </div>
+        <div class="calculator">
+            <p class="stat">Уровень персонажа:  <span id="current-level"></span></p>
+            <input type="range" class="level-range" id="level-range" min="1" max="96" value="96" step="1">
+            <p class="stat">Уровень оружия: <span id="current-weapon-level"></span></p>
+            <input type="range" class="level-range" id="level-range-weapon" min="1" max="74" value="74" step="1">
+            <p class="stat">Attack DMG: <span id="attack-dmg"></span></p>
+            <p class="stat">Weapon DMG: <span id="weapon-dmg"></span></p>
+
+            <table class="weapons-table">
+                <thead>
+                    <th class="weapons-table-th"></th>
+                    <th class="weapons-table-th">Название</th>
+                    <th class="weapons-table-th">Редкость</th>
+                    <th class="weapons-table-th">Сила Атаки</th>
+                    <tbody id="table-body">
+                        <tr id="weapons-table-tr" class="weapons-table-tr">
+                            <td class="weapon-icon"><img src="static/images/weapons/akuoumaru.png" alt=""></td>
+                            <td class="weapon-name">weapon name1</td>
+                            <td class="weapon-rarity">★</td>
+                            <td class="weapon-damage">001</td>
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
