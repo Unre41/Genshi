@@ -93,7 +93,7 @@ homeButton.addEventListener("click", () => {
 var range = document.getElementById("level-range")
 var rangeWeapon = document.getElementById("level-range-weapon")
 
-var rangeOuter = document.getElementById("current-level") - 6
+var rangeOuter = document.getElementById("current-level")
 var rangeWeaponOuter = document.getElementById("current-weapon-level")
 ё
 var attackDMG = document.getElementById("attack-dmg")
