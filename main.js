@@ -95,7 +95,6 @@ var rangeWeapon = document.getElementById("level-range-weapon")
 
 var rangeOuter = document.getElementById("current-level")
 var rangeWeaponOuter = document.getElementById("current-weapon-level")
-ё
 var attackDMG = document.getElementById("attack-dmg")
 var weaponDMG = document.getElementById("weapon-dmg")
 
