@@ -24,7 +24,7 @@ function openCalc(pers) {
     var rusName = currentChar.name
     var engName = currentChar.id
 
-
+    
     var heroSelectedImg = document.getElementById("hero-img")
     var heroSelectedName = document.getElementById("char-name")
 
@@ -93,9 +93,9 @@ homeButton.addEventListener("click", () => {
 var range = document.getElementById("level-range")
 var rangeWeapon = document.getElementById("level-range-weapon")
 
-var rangeOuter = document.getElementById("current-level")
+var rangeOuter = document.getElementById("current-level") - 6
 var rangeWeaponOuter = document.getElementById("current-weapon-level")
-
+ё
 var attackDMG = document.getElementById("attack-dmg")
 var weaponDMG = document.getElementById("weapon-dmg")
 
