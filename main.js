@@ -8,6 +8,7 @@ pers.forEach(char => {
 });
 
 var currentChar;
+var currentWeapon;
 var elemToClone = document.getElementById("weapons-table-tr").cloneNode(true);
 var table = document.getElementById("table-body");
 table.removeChild(table.children[0])
@@ -24,7 +25,7 @@ function openCalc(pers) {
     var rusName = currentChar.name
     var engName = currentChar.id
 
-    
+
     var heroSelectedImg = document.getElementById("hero-img")
     var heroSelectedName = document.getElementById("char-name")
 
@@ -64,17 +65,26 @@ function loadWeapons() {
 
         table.appendChild(elemToClone.cloneNode(true))
         
+        var weaponsArray = [...table.children]
 
+        weaponsArray.forEach(weap => {
+            weap.addEventListener("click", function() {selectWeapon(weap)})
+        });
+        
     });
     
     
 }
 
-function selectWeapon() {
-    console.log("weapon selected")
+
+var weaponName = document.getElementById("weapon-name")
+
+function selectWeapon(weap) {
+    currentWeapon = weaponsJSON[weap.getAttribute("id")]
+    
+    weaponName.innerText = currentWeapon.name
+    rangeWeapon.setAttribute('max', currentWeapon.atk.length - 1)
 }
-
-
 
 
 
@@ -95,6 +105,7 @@ var rangeWeapon = document.getElementById("level-range-weapon")
 
 var rangeOuter = document.getElementById("current-level")
 var rangeWeaponOuter = document.getElementById("current-weapon-level")
+
 var attackDMG = document.getElementById("attack-dmg")
 var weaponDMG = document.getElementById("weapon-dmg")
 
@@ -109,6 +120,7 @@ range.oninput = function() {
 
 rangeWeapon.oninput = function() {
     rangeWeaponOuter.innerText = this.value;
+    weaponDMG.innerText = Math.floor(currentWeapon.atk[this.value])
 }
 
 
